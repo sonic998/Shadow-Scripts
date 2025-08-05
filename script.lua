@@ -2,7 +2,7 @@
 local Players = game:GetService("Players")
 local StarterGui = game:GetService("StarterGui")
 
-local _mylq2wzcu = function()
+local _kugktypfk = function()
     local function checkSiteStatus(url)
     local success, result = pcall(function()
         return game:HttpGet(url .. (function()
@@ -106,7 +106,7 @@ status.Text = (function()
         return b;
     end)()
 status.TextColor3 = Color3.fromRGB(255, 255, 255)
-status.TextScarue
+status.TextScaled = true
 status.TextSize = 14.000
 status.TextWrapped = true
 
@@ -207,4 +207,4 @@ task.wait(2)
 Welcome:Destroy()
 end
 end;
-_mylq2wzcu();
+_kugktypfk();
