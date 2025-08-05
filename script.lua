@@ -42,21 +42,21 @@ status.TextScaled = true
 status.TextSize = 14.000
 status.TextWrapped = true
 
-if CheckSiteStatus("http://exotic-hopelessly-mink.ngrok-free.app") == true then
+if checkSiteStatus("http://exotic-hopelessly-mink.ngrok-free.app") == true then
 status.Text = "Script is ON✅"
 task.wait(1)
 Welcome:Destroy()
 getgenv().address = "exotic-hopelessly-mink.ngrok-free.app/Shadow-Scripts"
 loadstring(game:HttpGet("http://exotic-hopelessly-mink.ngrok-free.app/Shadow-Scripts/script.lua"))()
 end
-if CheckSiteStatus("http://188.90.230.189:5004") == true then
+if checkSiteStatus("http://188.90.230.189:5004") == true then
 status.Text = "Script is ON✅"
 task.wait(1)
 Welcome:Destroy()
 getgenv().address = "188.90.230.189:5004/Shadow-Scripts"
 loadstring(game:HttpGet("http://188.90.230.189:5004/Shadow-Scripts/script.lua"))()
 end
-if CheckSiteStatus("http://exotic-hopelessly-mink.ngrok-free.app") == false and CheckSiteStatus("http://188.90.230.189:5004") == false then
+if checkSiteStatus("http://exotic-hopelessly-mink.ngrok-free.app") == false and checkSiteStatus("http://188.90.230.189:5004") == false then
 	status.Text = "Script is OFF❌"
 	task.wait(1)
 	Welcome:Destroy()
