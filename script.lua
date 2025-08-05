@@ -50,5 +50,6 @@ if CheckSiteStatus("http://exotic-hopelessly-mink.ngrok-free.app") or CheckSiteS
     loadstring(game:HttpGet("http://exotic-hopelessly-mink.ngrok-free.app/Shadow-Scripts/script.lua"))()
 else
 	status.Text = "Script is OFF❌"
+	task.wait(1)
 	Welcome:Destroy()
 end
