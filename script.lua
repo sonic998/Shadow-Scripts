@@ -1,3 +1,15 @@
+local function checkSiteStatus(url)
+    local success, result = pcall(function()
+        return game:HttpGet(url .. "/status.txt") -- Create this file on your server
+    end)
+
+    if success then
+        return true
+    else
+        return false
+    end
+end
+
 local Welcome = Instance.new("ScreenGui")
 local ScriptStatus = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -30,7 +42,7 @@ status.TextScaled = true
 status.TextSize = 14.000
 status.TextWrapped = true
 
---[[if CheckSiteStatus("http://exotic-hopelessly-mink.ngrok-free.app") or CheckSiteStatus("http://188.90.230.189:5004") then
+if CheckSiteStatus("http://exotic-hopelessly-mink.ngrok-free.app") or CheckSiteStatus("http://188.90.230.189:5004") then
 	status.Text = "Script is ON✅"
 	task.wait(1)
 	Welcome:Destroy()
@@ -39,4 +51,4 @@ status.TextWrapped = true
 else
 	status.Text = "Script is OFF❌"
 	Welcome:Destroy()
-end--]]
+end
