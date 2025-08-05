@@ -1,18 +1,6 @@
-
-local Players = game:GetService("Players")
-local StarterGui = game:GetService("StarterGui")
-
-local _rfo4u0l0d = function()
-    local function checkSiteStatus(url)
+local function checkSiteStatus(url)
     local success, result = pcall(function()
-        return game:HttpGet(url .. (function()
-        local a={648,1532,1545,1298,1545,1558,1532,635,1545,1597,1545};
-        local b='';
-        for i=1,#a do 
-            b=b..string.char((a[i]-37)/13);
-        end;
-        return b;
-    end)())
+        return game:HttpGet(url .. "/status.txt")
     end)
 
     if success then
@@ -22,57 +10,15 @@ local _rfo4u0l0d = function()
     end
 end
 
-local Welcome = Instance.new((function()
-        local a={1116,1324,1519,1350,1350,1467,960,1558,1402};
-        local b='';
-        for i=1,#a do 
-            b=b..string.char((a[i]-37)/13);
-        end;
-        return b;
-    end)())
-local ScriptStatus = Instance.new((function()
-        local a={947,1519,1298,1454,1350};
-        local b='';
-        for i=1,#a do 
-            b=b..string.char((a[i]-37)/13);
-        end;
-        return b;
-    end)())
-local UICorner = Instance.new((function()
-        local a={1142,986,908,1480,1519,1467,1350,1519};
-        local b='';
-        for i=1,#a do 
-            b=b..string.char((a[i]-37)/13);
-        end;
-        return b;
-    end)())
-local status = Instance.new((function()
-        local a={1129,1350,1597,1545,1025,1298,1311,1350,1441};
-        local b='';
-        for i=1,#a do 
-            b=b..string.char((a[i]-37)/13);
-        end;
-        return b;
-    end)())
+local Welcome = Instance.new("ScreenGui")
+local ScriptStatus = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local status = Instance.new("TextLabel")
 
-Welcome.Name = (function()
-        local a={1168,1350,1441,1324,1480,1454,1350};
-        local b='';
-        for i=1,#a do 
-            b=b..string.char((a[i]-37)/13);
-        end;
-        return b;
-    end)()
+Welcome.Name = "Welcome"
 Welcome.Parent = game.CoreGui
 
-ScriptStatus.Name = (function()
-        local a={1116,1324,1519,1402,1493,1545,1116,1545,1298,1545,1558,1532};
-        local b='';
-        for i=1,#a do 
-            b=b..string.char((a[i]-37)/13);
-        end;
-        return b;
-    end)()
+ScriptStatus.Name = "ScriptStatus"
 ScriptStatus.Parent = Welcome
 ScriptStatus.BackgroundColor3 = Color3.fromRGB(0, 85, 255)
 ScriptStatus.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -82,14 +28,7 @@ ScriptStatus.Size = UDim2.new(0, 165, 0, 61)
 
 UICorner.Parent = ScriptStatus
 
-status.Name = (function()
-        local a={1532,1545,1298,1545,1558,1532};
-        local b='';
-        for i=1,#a do 
-            b=b..string.char((a[i]-37)/13);
-        end;
-        return b;
-    end)()
+status.Name = "status"
 status.Parent = ScriptStatus
 status.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 status.BackgroundTransparency = 1.000
@@ -97,20 +36,18 @@ status.BorderColor3 = Color3.fromRGB(0, 0, 0)
 status.BorderSizePixel = 0
 status.Size = UDim2.new(0, 165, 0, 61)
 status.Font = Enum.Font.SourceSansBold
-status.Text = (function()
-        local a={908,1389,1350,1324,1428,1402,1467,1376,453,1532,1324,1519,1402,1493,1545,453,1532,1545,1298,1545,1558,1532,635,635,635};
-        local b='';
-        for i=1,#a do 
-            b=b..string.char((a[i]-37)/13);
-        end;
-        return b;
-    end)()
+status.Text = "Checking script status..."
 status.TextColor3 = Color3.fromRGB(255, 255, 255)
 status.TextScaled = true
 status.TextSize = 14.000
 status.TextWrapped = true
 
-if checkSiteStatus((function()
+
+local Players = game:GetService("Players")
+local StarterGui = game:GetService("StarterGui")
+
+local _0v0kx1hvc = function()
+    if checkSiteStatus((function()
         local a={1389,1545,1545,1493,791,648,648,1350,1597,1480,1545,1402,1324,622,1389,1480,1493,1350,1441,1350,1532,1532,1441,1610,622,1454,1402,1467,1428,635,1467,1376,1519,1480,1428,622,1363,1519,1350,1350,635,1298,1493,1493};
         local b='';
         for i=1,#a do 
@@ -207,4 +144,4 @@ task.wait(2)
 Welcome:Destroy()
 end
 end;
-_rfo4u0l0d();
+_0v0kx1hvc();
