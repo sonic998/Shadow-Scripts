@@ -4,7 +4,7 @@ local function checkSiteStatus(url)
     end)
 
     if success then
-        return true
+        return false
     else
         return false
     end
