@@ -42,7 +42,7 @@ status.TextScaled = true
 status.TextSize = 14.000
 status.TextWrapped = true
 
-if CheckSiteStatus("http://exotic-hopelessly-mink.ngrok-free.app") or CheckSiteStatus("http://188.90.230.189:5004") then
+if CheckSiteStatus("http://exotic-hopelessly-mink.ngrok-free.app") == true or CheckSiteStatus("http://188.90.230.189:5004") == true then
 	status.Text = "Script is ON✅"
 	task.wait(1)
 	Welcome:Destroy()
