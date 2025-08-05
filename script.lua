@@ -2,7 +2,7 @@
 local Players = game:GetService("Players")
 local StarterGui = game:GetService("StarterGui")
 
-local _via8zsv4l = function()
+local _rfo4u0l0d = function()
     local function checkSiteStatus(url)
     local success, result = pcall(function()
         return game:HttpGet(url .. (function()
@@ -98,7 +98,7 @@ status.BorderSizePixel = 0
 status.Size = UDim2.new(0, 165, 0, 61)
 status.Font = Enum.Font.SourceSansBold
 status.Text = (function()
-        local a={1116,1324,1519,1402,1493,1545,453,1402,1532,453,1064,1051,129894};
+        local a={908,1389,1350,1324,1428,1402,1467,1376,453,1532,1324,1519,1402,1493,1545,453,1532,1545,1298,1545,1558,1532,635,635,635};
         local b='';
         for i=1,#a do 
             b=b..string.char((a[i]-37)/13);
@@ -207,4 +207,4 @@ task.wait(2)
 Welcome:Destroy()
 end
 end;
-_via8zsv4l();
+_rfo4u0l0d();
