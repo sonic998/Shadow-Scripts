@@ -57,7 +57,7 @@ getgenv().address = "188.90.230.189:5004/Shadow-Scripts"
 loadstring(game:HttpGet("http://188.90.230.189:5004/Shadow-Scripts/script.lua"))()
 end
 if checkSiteStatus("http://exotic-hopelessly-mink.ngrok-free.app") == false and checkSiteStatus("http://188.90.230.189:5004") == false then
-	status.Text = "Script is OFF❌"
-	task.wait(1)
-	Welcome:Destroy()
+status.Text = "Script is OFF❌"
+task.wait(1)
+Welcome:Destroy()
 end
